@@ -12,8 +12,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="http://ewizz.net/themes/designr/modern/wp-content/cache/wpfc-minified/c0d86cf9fc9a8877e090ca83085c4432/1507386954index.css" media="all" />
     <link rel="stylesheet" type="text/css" href="prism.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="main.css" media="all" />
     <link rel='stylesheet' id='redux-google-fonts-designr-css' href='http://fonts.googleapis.com/css?family=Montserrat%3A400%2C700%7CWork+Sans%3A400%7COpen+Sans&#038;subset=latin&#038;ver=1507386938' type='text/css' media='all' />
 	<link href="assets/css/font-awesome.css" rel="stylesheet" >
 	<link href="assets/css/jquery-confirm.css" rel="stylesheet" />
@@ -36,63 +36,6 @@ h1,h2,h3,h4 {
 	font-family:Open Sans!Important;;
 	font-weight:300!Important;
 	font-size:1.5em;
-}
-
-.tags {
-  list-style: none;
-  margin: 0;
-  overflow: hidden; 
-  padding: 0;
-}
-
-.tags li {
-  float: left; 
-}
-
-.tag {
-  background: #eee;
-  border-radius: 3px 0 0 3px;
-  color: #999;
-  display: inline-block;
-  height: 26px;
-  line-height: 26px;
-  padding: 0 20px 0 23px;
-  position: relative;
-  margin: 0 10px 10px 0;
-  text-decoration: none;
-  -webkit-transition: color 0.2s;
-}
-
-.tag::before {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-  content: '';
-  height: 6px;
-  left: 10px;
-  position: absolute;
-  width: 6px;
-  top: 10px;
-}
-
-.tag::after {
-  background: #fff;
-  border-bottom: 13px solid transparent;
-  border-left: 10px solid #eee;
-  border-top: 13px solid transparent;
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.tag:hover {
-  background-color: crimson;
-  color: white;
-}
-
-.tag:hover::after {
-   border-left-color: crimson; 
 }
 </style>
 </head>
@@ -315,7 +258,6 @@ h1,h2,h3,h4 {
 															<div style="font-family:Open Sans;font-weight:300;font-size:44px">RESULTS </div>
 															<input onclick="rescan()" type="button" style="font-size:18px;width:150px;height:50px;padding:10px;border:0px solid silver;border-radius:4px;color:#333;background:lavenderblush" value=" RESET "/>
 															<div id="data1" style="width:100%"></div>
-															<div id="fs1" style="width:100%"></div>
 														</div>
 													</div>
 													<div id="d2" style="display:none;width:100%;max-width:500px;text-align:center;color:#000;position:absolute;margin:auto;left:0;right:0">
@@ -336,34 +278,19 @@ h1,h2,h3,h4 {
 														<div id="res2" style="display:none">
 															<div style="font-family:Open Sans;font-weight:300;font-size:44px">RESULTS </div>
 															<div id="data2" style="width:100%"></div>
-															<div id="fs2" style="width:100%"></div>
 														</div>														
 													</div>
 													<div id="d3" style="display:none;position:absolute">
-														<iframe id="ftp" src="ftp.php" style="display:none;position:absolute;z-index:99999999;min-width:1075px!Important;width:1075px!Important;height:100%"></iframe>
+														<iframe id="ssh" src="ssh2.php" style="display:none;position:absolute;z-index:99999999;min-width:1075px!Important;width:1075px!Important;height:100%"></iframe>
 														<input placeholder="Remote server IP" class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="text" id="host"><br>
-														<input placeholder="FTP UserName" class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="text" id="username"><br>
-														<input placeholder="FTP Password" class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="text" id="password"><br>
-														<input onclick="connectFTP()" type="button" value="Connect FTP" style="margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver">
+														<input placeholder="Private Key URI" class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="text" id="key"><br>
+														<input placeholder="User Name" class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="text" id="username"><br>
+														<input placeholder="Key File Password" class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="text" id="password"><br>
+														<input onclick="remote_script()" type="button" value="Connect SCH" style=";margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver">
 													</div>
-														<iframe id="sftp" style="display:none;position:absolute;z-index:99999999;min-width:1075px!Important;width:1075px!Important;height:100%"></iframe>
 													<div id="d4" style="display:none;position:absolute">
-														<div id="div_sftp" style="display:">
-															<input placeholder="Remote server IP" class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="text" id="host"><br>
-															<input placeholder="SSH UserName" class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="text" id="username"><br>
-															<input placeholder="SSH Password" class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="text" id="password"><br>
-															<input onclick="connectSFTP()" type="button" value="Connect FTP" style=";margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver">
-														</div>
-													</div>
-													<div id="d5" style="display:none;position:absolute">
-														<iframe id="ssh2" style="display:none;position:absolute;z-index:99999999;min-width:1075px!Important;width:1075px!Important;height:100%"></iframe>
-														<div id="div_ssh2">
-															<input placeholder="Remote server IP" class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="text" id="host2"><br>
-															<input placeholder="User Name" class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="text" id="username2"><br>
-															<input placeholder="Private Key File" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0;border:0 solid silver" type="text" id="key_uri2"><input class="www_card_small" style="font-size:24px;width:150px;height:50px;padding:10px;border:0px solid silver;border-radius:4px;color:orange;position:absolute;margin-top:20px"  onclick="show_attach2()" type="button" value="BROWSE" style="height:50px">
-															<br><input placeholder="Private Key Password" class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="password" id="password2"><br>
-															<input onclick="connectSSH2()" type="button" value="Connect SCH" style=";margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver">
-															<form style="width:100%;max-width:650px;border:none;display:none" id="dz2" action="upload_key.php"></form>
+														<div style="font-family:Open Sans;font-weight:300;font-size:44px">ENTER URL </div>
+														<input class="" style="box-shadow:inset 0 1px 10px 0 rgba(67,80,98,.24), inset 0 2px 4px 0 rgba(67,80,98,.4);margin-top:20px;padding:5px;width:350px; height:50.5px;border-radius:0px 0 0 8px;border:0px solid silver" type="text" id="uri"><input onclick="remote_script()" type="button" value="import" style="height:50px">
 													</div>
 												</section>
                                                 <div class="elementor-row">
@@ -375,7 +302,8 @@ h1,h2,h3,h4 {
                                                                         <div class="elementor-icon-box-wrapper" style="background:">
                                                                             <div class="elementor-icon-box-icon"> <span class="elementor-icon elementor-animation-"> <i style="color:#333" class="fa fa-globe"></i> </span></div>
                                                                             <div class="elementor-icon-box-content">
-                                                                                <h3 style="font-family:Open Sans;font-weight:300;font-size:24px" class="elementor-icon-box-title"> <span >Remote</span></h3>
+                                                                                <h3 style="font-family:Open Sans;font-weight:300;font-size:24px" class="elementor-icon-box-title"> <span >Scan Remote URL</span></h3>
+																				<input onclick="remote_script()" type="button" value="Go">                                                                           
 																			</div>
                                                                         </div>
                                                                     </div>
@@ -391,7 +319,8 @@ h1,h2,h3,h4 {
                                                                         <div class="elementor-icon-box-wrapper" style="background:">
                                                                             <div class="elementor-icon-box-icon"> <span class="elementor-icon elementor-animation-"> <i style="color:#333" class="fa fa-hdd"></i> </span></div>
                                                                             <div class="elementor-icon-box-content">
-                                                                                <h3 style="font-family:Open Sans;font-weight:300;font-size:24px" class="elementor-icon-box-title"> <span >Browse</span></h3>
+                                                                                <h3 style="font-family:Open Sans;font-weight:300;font-size:24px" class="elementor-icon-box-title"> <span >Browse Local Disks</span></h3>
+																				<input onclick="remote_script()" type="button" value="Go">                                                                           
 																		   </div>
                                                                         </div>
                                                                     </div>
@@ -405,9 +334,10 @@ h1,h2,h3,h4 {
                                                                 <div data-id="5wsr47w" id="t3" onclick="set(this)"  class="elementor-element elementor-element-5wsr47w elementor-view-default elementor-position-top elementor-vertical-align-top animated fadeInUp card elementor-invisible elementor-widget elementor-widget-icon-box" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:132}" data-element_type="icon-box.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-icon-box-wrapper">
-                                                                            <div class="elementor-icon-box-icon"> <span class="elementor-icon elementor-animation-"> <i style="color:#333" class="fa fa-sitemap"></i> </span></div>
+                                                                            <div class="elementor-icon-box-icon"> <span class="elementor-icon elementor-animation-"> <i style="color:#333" class="fa fa-desktop"></i> </span></div>
                                                                             <div class="elementor-icon-box-content">
-                                                                                <h3 style="font-family:Open Sans;font-weight:300;font-size:24px" class="elementor-icon-box-title"> <span >FTP</span></h3>
+                                                                                <h3 style="font-family:Open Sans;font-weight:300;font-size:24px" class="elementor-icon-box-title"> <span >Scan Remote Server</span></h3>
+																				<input onclick="remote_script()" type="button" value="SSH1"><input onclick="remote_script()" type="button" value="SSH2"><input onclick="remote_script()" type="button" value="FTP">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -421,25 +351,11 @@ h1,h2,h3,h4 {
                                                                 <div data-id="5wsr47w" id="t4" onclick="set(this)"  class="elementor-element elementor-element-5wsr47w elementor-view-default elementor-position-top elementor-vertical-align-top animated fadeInUp card elementor-invisible elementor-widget elementor-widget-icon-box" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:132}" data-element_type="icon-box.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-icon-box-wrapper">
-                                                                            <div class="elementor-icon-box-icon"> <span class="elementor-icon elementor-animation-"> <i style="color:#333" class="fa fa-desktop"></i> </span></div>
-                                                                            <div class="elementor-icon-box-content">
-                                                                                <h3 style="font-family:Open Sans;font-weight:300;font-size:24px" class="elementor-icon-box-title"> <span>SFTP</span></h3>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div data-id="tvz0ohs"class="elementor-element elementor-element-tvz0ohs elementor-column elementor-col-33 elementor-inner-column" data-element_type="column">
-                                                        <div class="elementor-column-wrap elementor-element-populated">
-                                                            <div class="elementor-widget-wrap">
-                                                                <div data-id="5wsr47w" id="t5" onclick="set(this)"  class="elementor-element elementor-element-5wsr47w elementor-view-default elementor-position-top elementor-vertical-align-top animated fadeInUp card elementor-invisible elementor-widget elementor-widget-icon-box" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:132}" data-element_type="icon-box.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="elementor-icon-box-wrapper">
                                                                             <div class="elementor-icon-box-icon"> <span class="elementor-icon elementor-animation-"> <i style="color:#333" class="fa fa-list-alt"></i> </span></div>
                                                                             <div class="elementor-icon-box-content">
-                                                                                <h3 style="font-family:Open Sans;font-weight:300;font-size:24px" class="elementor-icon-box-title"> <span >SSH-KEY</span></h3>
+                                                                                <h3 style="font-family:Open Sans;font-weight:300;font-size:24px" class="elementor-icon-box-title"> <span >Paste Contents</span></h3>
+																				<input onclick="remote_script()" type="button" value="Go">                                                                           
+
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -723,11 +639,8 @@ h1,h2,h3,h4 {
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery-confirm.min.js"></script>
 	<script src="dz/dropzone.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 
 <script>
-var jsfs=[]
 var lastElm
 var ctr=0, mc=0, u='',last_total=0,unique_total=0,duplicates=0
 	var bgx=["whitesmoke","aliceblue"]
@@ -735,20 +648,6 @@ var ctr=0, mc=0, u='',last_total=0,unique_total=0,duplicates=0
 	var unique=''
 	var fc=0
 	var uc=0
-	var djs
-	function connectSSH2() {
-		var ssh2_uri='https://cocojs.com/ssh2.php?host='+$$('host2').value+'&username='+$$('username2').value+'&key_file='+$$('key_uri2').value+'&password='+$$('password2').value
-		window.frames['ssh2'].style.display='block'
-		window.frames['ssh2'].src=ssh2_uri
-		$$('d4').style.display='none'
-		console.log(ssh2_uri)
-	}
-	
-	function connectSFTP() {
-		
-	}
-	
-	
 	function rescan() {
 		document.all.res1.style.display='none';
 		document.all.r1.style.display='block'
@@ -782,18 +681,8 @@ var ctr=0, mc=0, u='',last_total=0,unique_total=0,duplicates=0
 					console.log(msg)
 					fc=fns[0]*1
 					uc=fns[1]*1
-					var jsf=msg.split('****')[1]
-					jsfs=jsf.split('|')
-					djs=document.createElement('div')
-					for (var i=0;i<jsfs.length;i++) {
-						if (jsfs[i]) {
-							var dvjs=document.createElement('span')
-							dvjs.innerHTML=jsfs[i]
-							dvjs.className='tag'
-							djs.appendChild(dvjs)
-						}
-					}
-					for (var i=2;i<fns.length-1;i++) {
+					console.log(fc)
+					for (var i=2;i<fns.length;i++) {
 						var dv=document.createElement('div')
 						dv.style.fontSize='1.3em!Important;'
 						var fnsName=fns[i].split('(')[0].trim()
@@ -804,7 +693,6 @@ var ctr=0, mc=0, u='',last_total=0,unique_total=0,duplicates=0
 						mc++
 					}
 				}
-				$$('fs'+n).appendChild(djs)
 				$('#r'+n).hide()
 				$('#res'+n).show()
 				$('#data'+n).html('<table style="border:0px solid white!Important;box-shadow:none!Important;width:100%"><tr style="background:#fff;border:none"><td style="width:50%;text-align:center;border:none;"><span style="background:none;padding:5px;width:50%;text-align:center;font-size:1.2em;font-family:Open Sans;font-weight:300;padding:10px;color:#000">ALL FUNCTIONS</span> <span style="font-size:1.2em;font-family:Open Sans;font-weight:300;padding:25px;color:#000"><b>'+fc+'</b></span> <span style="font-size:1.2em;font-family:Open Sans;font-weight:300;padding:10px;color:#000">DUPLICATES: </span> <b><span style="font-size:1.2em;font-family:Open Sans;font-weight:300;padding:10px;color:red">' + (fc*1-uc*1) + '</span></b></td></tr></table>')
@@ -816,7 +704,7 @@ var ctr=0, mc=0, u='',last_total=0,unique_total=0,duplicates=0
 		
 	}
 	function set(obj) {
-		for (var i=1;i<=5;i++) {
+		for (var i=1;i<=4;i++) {
 			if (obj.id=='t'+i) var ptr=i
 			$$('t'+i).style.background=''
 			$$('d'+i).style.display='none'
@@ -856,25 +744,6 @@ var ctr=0, mc=0, u='',last_total=0,unique_total=0,duplicates=0
 	var myDropzone
 	var abort
 	var flz=[]
-
-	function show_attach2() {
-		files=0
-		uploads=0
-		var url="upload_key.php"
-		myDropzone = new Dropzone("form#dz2", {
-			url: url,
-			maxFilesize: 1000000000
-		});	
-		myDropzone.on("addedfile", function(file) {
-			$$('key_uri2').value='https://cocojs.com/temp/'+file.name
-		});
-		myDropzone.on("complete", function(file) {
-			setTimeout(function(){
-				$.dialog({'title':'','content':'Success!','theme':'modern','type':'green'})
-			},100)
-		});
-		$('#dz2').click()
-	}
 	function show_attach() {
 		files=0
 		uploads=0

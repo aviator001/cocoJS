@@ -1,18 +1,32 @@
 <?php
 include "class/utils.class.php";
+include('dom/simple_html_dom.php');
+
 $c=new utils;
-$c->connect('199.91.65.82','cocojs');
+$c->connect();
 $total=0;
 $unique=0;
 $j=explode('|',$_GET[uri]);
 $code='';
+$scr='';
 for ($k=0;$k<count($j);$k++) {
 	$cd=build($j[$k]);
 	$code=$code . $cd;
+	$html=file_get_html($j[$k]);
+	foreach($html->find('script') as $e) {
+		$src=$e->src;
+		if (strstr($src,"min")===false) {
+			$scr = $scr . $src . '|';
+			$cd1=build($src);
+			$code1=$code1 . $cd1;
+		}
+	}
 }
-echo $total . "@@@@" . $unique . "@@@@" . $code;
+
+echo $total . "@@@@" . $unique . "@@@@" . $code. "@@@@" . $code1 . "****" . $scr;
 
 function build($uri) {
+	GLOBAL $c;
 	$st='';
 	global $unique,$total;
 	$js=file_get_contents($uri);
@@ -45,7 +59,15 @@ function build($uri) {
 				}
 		}
 		$st = $st . $str . "\r\n\r\n@@@@\r\n\r\n";
-		$found="";
+			$header=explode("{",trim($str))[0];
+			$parts=substr($header,0,strlen($header)-2);
+			$fname=explode("(",$parts)[0];
+			$inputs=explode("(",$parts)[1];
+			$qry="INSERT INTO `functions` (`iid`, `fname`, `alias`, `input`, `output`, `public`, `url`, `desc`, `last_update`, `compress`, `location`, `async`, `var_declarations`, `header`) VALUES ('1', '$fname', '$alias', '$inputs', '$outputs', '1', '$url', '$desc', '$last_update', '0', '$location', '0', '$vars','function ".trim($header)."')";
+			$fid=$c->insert($qry);
+			$fid=$c->insert($qry);
+		 $c->insert("INSERT INTO `function_detail` (`fid`, `function_body`) VALUES ($fid, '$str')");
+		 $found="";
 	}
 	return $st;
 }
