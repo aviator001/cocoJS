@@ -1,0 +1,172 @@
+[22-Feb-2015 11:21:12 UTC] PHP Warning:  file_get_contents(../photos/017872_1.jpg): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/WideImage.php on line 195
+[22-Feb-2015 11:21:12 UTC] PHP Warning:  unpack(): Type c: not enough input, need 1, have 0 in /home/gaysugar/public_html/assets/wi/vendor/de77/TGA.php on line 93
+[22-Feb-2015 11:21:12 UTC] PHP Fatal error:  Uncaught exception 'WideImage_InvalidImageSourceException' with message 'File '../photos/017872_1.jpg' appears to be an invalid image source.' in /home/gaysugar/public_html/assets/wi/WideImage.php:226
+Stack trace:
+#0 [internal function]: WideImage::loadFromFile('../photos/01787...')
+#1 /home/gaysugar/public_html/assets/wi/WideImage.php(184): call_user_func(Array, '../photos/01787...')
+#2 /home/gaysugar/public_html/assets/wi/wi.php(3): WideImage::load('../photos/01787...')
+#3 {main}
+  thrown in /home/gaysugar/public_html/assets/wi/WideImage.php on line 226
+[22-Feb-2015 11:56:44 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/gaysugar/public_html/assets/wi/wi.php on line 28
+[22-Feb-2015 11:57:02 UTC] PHP Warning:  file_get_contents(../../test.jpg): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/WideImage.php on line 195
+[22-Feb-2015 11:57:02 UTC] PHP Warning:  unpack(): Type c: not enough input, need 1, have 0 in /home/gaysugar/public_html/assets/wi/vendor/de77/TGA.php on line 93
+[22-Feb-2015 11:57:02 UTC] PHP Fatal error:  Uncaught exception 'WideImage_InvalidImageSourceException' with message 'File '../../test.jpg' appears to be an invalid image source.' in /home/gaysugar/public_html/assets/wi/WideImage.php:226
+Stack trace:
+#0 [internal function]: WideImage::loadFromFile('../../test.jpg')
+#1 /home/gaysugar/public_html/assets/wi/WideImage.php(184): call_user_func(Array, '../../test.jpg')
+#2 /home/gaysugar/public_html/assets/wi/wi.php(7): WideImage::load('../../test.jpg')
+#3 {main}
+  thrown in /home/gaysugar/public_html/assets/wi/WideImage.php on line 226
+[22-Feb-2015 11:57:35 UTC] PHP Warning:  file_get_contents(../../test.jpg): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/WideImage.php on line 195
+[22-Feb-2015 11:57:35 UTC] PHP Warning:  unpack(): Type c: not enough input, need 1, have 0 in /home/gaysugar/public_html/assets/wi/vendor/de77/TGA.php on line 93
+[22-Feb-2015 11:57:35 UTC] PHP Fatal error:  Uncaught exception 'WideImage_InvalidImageSourceException' with message 'File '../../test.jpg' appears to be an invalid image source.' in /home/gaysugar/public_html/assets/wi/WideImage.php:226
+Stack trace:
+#0 [internal function]: WideImage::loadFromFile('../../test.jpg')
+#1 /home/gaysugar/public_html/assets/wi/WideImage.php(184): call_user_func(Array, '../../test.jpg')
+#2 /home/gaysugar/public_html/assets/wi/wi.php(7): WideImage::load('../../test.jpg')
+#3 {main}
+  thrown in /home/gaysugar/public_html/assets/wi/WideImage.php on line 226
+[22-Feb-2015 11:58:21 UTC] PHP Warning:  : failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/wi.php on line 8
+[22-Feb-2015 11:58:27 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/gaysugar/public_html/assets/wi/Mapper/PNG.php on line 39
+[22-Feb-2015 11:58:58 UTC] PHP Fatal error:  Uncaught exception 'WideImage_InvalidImageSourceException' with message 'String doesn't contain image data.' in /home/gaysugar/public_html/assets/wi/WideImage.php:240
+Stack trace:
+#0 [internal function]: WideImage::loadFromString(NULL)
+#1 /home/gaysugar/public_html/assets/wi/WideImage.php(184): call_user_func(Array, NULL)
+#2 /home/gaysugar/public_html/assets/wi/wi.php(22): WideImage::load(NULL)
+#3 {main}
+  thrown in /home/gaysugar/public_html/assets/wi/WideImage.php on line 240
+[22-Feb-2015 12:00:12 UTC] PHP Fatal error:  Uncaught exception 'WideImage_UnsupportedFormatException' with message 'Format '' is not supported.' in /home/gaysugar/public_html/assets/wi/MapperFactory.php:79
+Stack trace:
+#0 /home/gaysugar/public_html/assets/wi/Image.php(159): WideImage_MapperFactory::selectMapper(NULL, NULL)
+#1 /home/gaysugar/public_html/assets/wi/wi.php(24): WideImage_Image->saveToFile(NULL)
+#2 {main}
+  thrown in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 79
+[22-Feb-2015 12:07:23 UTC] PHP Fatal error:  Call to a member function autocrop() on a non-object in /home/gaysugar/public_html/assets/wi/wi.php on line 23
+[22-Feb-2015 12:15:36 UTC] PHP Warning:  getimagesize(photos/test.jpg): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/wi.php on line 7
+[22-Feb-2015 12:15:36 UTC] PHP Warning:  file_get_contents(photos/test.jpg): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/WideImage.php on line 195
+[22-Feb-2015 12:15:36 UTC] PHP Warning:  unpack(): Type c: not enough input, need 1, have 0 in /home/gaysugar/public_html/assets/wi/vendor/de77/TGA.php on line 93
+[22-Feb-2015 12:15:36 UTC] PHP Fatal error:  Uncaught exception 'WideImage_InvalidImageSourceException' with message 'File 'photos/test.jpg' appears to be an invalid image source.' in /home/gaysugar/public_html/assets/wi/WideImage.php:226
+Stack trace:
+#0 [internal function]: WideImage::loadFromFile('photos/test.jpg')
+#1 /home/gaysugar/public_html/assets/wi/WideImage.php(184): call_user_func(Array, 'photos/test.jpg')
+#2 /home/gaysugar/public_html/assets/wi/wi.php(22): WideImage::load('photos/test.jpg')
+#3 {main}
+  thrown in /home/gaysugar/public_html/assets/wi/WideImage.php on line 226
+[04-Mar-2015 17:00:21 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[04-Mar-2015 17:00:21 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[04-Mar-2015 17:00:22 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[04-Mar-2015 17:00:23 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[04-Mar-2015 17:00:24 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[04-Mar-2015 17:00:24 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[04-Mar-2015 17:00:24 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[04-Mar-2015 17:01:54 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[04-Mar-2015 17:01:54 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[04-Mar-2015 17:01:54 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[04-Mar-2015 17:01:54 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[04-Mar-2015 17:01:54 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[04-Mar-2015 17:01:54 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[04-Mar-2015 17:01:54 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[04-Mar-2015 17:01:54 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[04-Mar-2015 17:01:54 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[04-Mar-2015 17:01:55 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[04-Mar-2015 17:01:55 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[04-Mar-2015 17:01:55 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[04-Mar-2015 17:01:55 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[04-Mar-2015 17:01:55 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[04-Mar-2015 17:01:55 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[04-Mar-2015 17:01:55 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[04-Mar-2015 17:01:56 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[04-Mar-2015 17:01:56 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[04-Mar-2015 17:01:56 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[04-Mar-2015 17:01:56 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[04-Mar-2015 17:01:56 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[04-Mar-2015 17:01:56 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[04-Mar-2015 17:01:56 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[04-Mar-2015 17:01:56 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[04-Mar-2015 17:01:56 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[04-Mar-2015 17:01:57 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[04-Mar-2015 17:01:57 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[04-Mar-2015 17:01:57 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[04-Mar-2015 17:01:57 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[04-Mar-2015 17:01:57 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[04-Mar-2015 17:01:57 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[04-Mar-2015 17:01:57 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[04-Mar-2015 17:01:57 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[04-Mar-2015 17:01:57 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[04-Mar-2015 17:01:58 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[05-Mar-2015 00:46:58 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[05-Mar-2015 00:46:58 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[05-Mar-2015 00:46:58 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[05-Mar-2015 00:46:58 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[05-Mar-2015 00:46:58 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[05-Mar-2015 00:46:58 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[05-Mar-2015 00:46:58 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[05-Mar-2015 01:23:26 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[05-Mar-2015 01:23:26 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[05-Mar-2015 01:23:26 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[05-Mar-2015 01:23:27 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[05-Mar-2015 01:23:27 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[05-Mar-2015 01:23:27 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[05-Mar-2015 01:23:29 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[05-Mar-2015 01:23:29 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[05-Mar-2015 01:23:30 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[05-Mar-2015 01:23:30 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[05-Mar-2015 01:23:30 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[05-Mar-2015 01:23:31 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[05-Mar-2015 01:23:32 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[05-Mar-2015 01:23:32 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[05-Mar-2015 01:23:33 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[05-Mar-2015 01:23:42 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[05-Mar-2015 01:23:42 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[05-Mar-2015 01:23:43 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[05-Mar-2015 01:23:43 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[05-Mar-2015 01:23:44 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[05-Mar-2015 01:23:44 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[05-Mar-2015 01:32:25 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[05-Mar-2015 01:32:25 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[05-Mar-2015 01:32:25 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[05-Mar-2015 01:32:26 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[05-Mar-2015 01:32:26 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[05-Mar-2015 01:32:26 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[05-Mar-2015 01:32:26 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[05-Mar-2015 07:30:22 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[05-Mar-2015 07:30:22 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[05-Mar-2015 07:30:22 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[05-Mar-2015 07:30:22 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[05-Mar-2015 07:30:23 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[05-Mar-2015 07:30:23 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[05-Mar-2015 07:30:23 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[05-Apr-2015 13:00:38 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[05-Apr-2015 13:00:38 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[05-Apr-2015 13:00:38 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[05-Apr-2015 13:00:38 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[05-Apr-2015 13:00:38 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[05-Apr-2015 13:00:38 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[05-Apr-2015 13:00:38 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[05-Apr-2015 13:00:38 UTC] PHP Warning:  include(../inc/utils.class.php): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/tpl_view_photo.php on line 4
+[05-Apr-2015 13:00:38 UTC] PHP Warning:  include(../inc/utils.class.php): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/tpl_view_photo.php on line 4
+[05-Apr-2015 13:00:38 UTC] PHP Warning:  include(): Failed opening '../inc/utils.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php:/home/gaysugar/php') in /home/gaysugar/public_html/assets/wi/tpl_view_photo.php on line 4
+[05-Apr-2015 13:00:38 UTC] PHP Fatal error:  Class 'utils' not found in /home/gaysugar/public_html/assets/wi/tpl_view_photo.php on line 5
+[05-Apr-2015 13:00:38 UTC] PHP Warning:  include(utils.class.php): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/x_photo_filters.php on line 2
+[05-Apr-2015 13:00:38 UTC] PHP Warning:  include(utils.class.php): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/x_photo_filters.php on line 2
+[05-Apr-2015 13:00:38 UTC] PHP Warning:  include(): Failed opening 'utils.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php:/home/gaysugar/php') in /home/gaysugar/public_html/assets/wi/x_photo_filters.php on line 2
+[05-Apr-2015 13:00:38 UTC] PHP Fatal error:  Class 'utils' not found in /home/gaysugar/public_html/assets/wi/x_photo_filters.php on line 3
+[05-Apr-2015 13:09:37 UTC] PHP Warning:  include(../inc/utils.class.php): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/tpl_view_photo.php on line 4
+[05-Apr-2015 13:09:37 UTC] PHP Warning:  include(../inc/utils.class.php): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/tpl_view_photo.php on line 4
+[05-Apr-2015 13:09:37 UTC] PHP Warning:  include(): Failed opening '../inc/utils.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php:/home/gaysugar/php') in /home/gaysugar/public_html/assets/wi/tpl_view_photo.php on line 4
+[05-Apr-2015 13:09:37 UTC] PHP Fatal error:  Class 'utils' not found in /home/gaysugar/public_html/assets/wi/tpl_view_photo.php on line 5
+[14-Apr-2015 22:17:15 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Canvas.php on line 28
+[14-Apr-2015 22:17:15 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Coordinate.php on line 29
+[14-Apr-2015 22:17:15 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/Image.php on line 30
+[14-Apr-2015 22:17:16 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/MapperFactory.php on line 30
+[14-Apr-2015 22:17:16 UTC] PHP Fatal error:  Class 'WideImage_Exception' not found in /home/gaysugar/public_html/assets/wi/OperationFactory.php on line 28
+[14-Apr-2015 22:17:16 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/PaletteImage.php on line 29
+[14-Apr-2015 22:17:16 UTC] PHP Fatal error:  Class 'WideImage_Image' not found in /home/gaysugar/public_html/assets/wi/TrueColorImage.php on line 29
+[14-Apr-2015 22:17:16 UTC] PHP Warning:  include(../inc/utils.class.php): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/tpl_view_photo.php on line 4
+[14-Apr-2015 22:17:16 UTC] PHP Warning:  include(../inc/utils.class.php): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/tpl_view_photo.php on line 4
+[14-Apr-2015 22:17:16 UTC] PHP Warning:  include(): Failed opening '../inc/utils.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php:/home/gaysugar/php') in /home/gaysugar/public_html/assets/wi/tpl_view_photo.php on line 4
+[14-Apr-2015 22:17:16 UTC] PHP Fatal error:  Class 'utils' not found in /home/gaysugar/public_html/assets/wi/tpl_view_photo.php on line 5
+[14-Apr-2015 22:17:17 UTC] PHP Warning:  include(utils.class.php): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/x_photo_filters.php on line 2
+[14-Apr-2015 22:17:17 UTC] PHP Warning:  include(utils.class.php): failed to open stream: No such file or directory in /home/gaysugar/public_html/assets/wi/x_photo_filters.php on line 2
+[14-Apr-2015 22:17:17 UTC] PHP Warning:  include(): Failed opening 'utils.class.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php:/home/gaysugar/php') in /home/gaysugar/public_html/assets/wi/x_photo_filters.php on line 2
+[14-Apr-2015 22:17:17 UTC] PHP Fatal error:  Class 'utils' not found in /home/gaysugar/public_html/assets/wi/x_photo_filters.php on line 3
